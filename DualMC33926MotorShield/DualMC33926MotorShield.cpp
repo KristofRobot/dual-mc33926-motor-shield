@@ -128,3 +128,9 @@ unsigned char DualMC33926MotorShield::getFault()
 {
   return !digitalRead(_nSF);
 }
+
+//false: disable motor outputs (free coasting); true: enable motors
+void DualMC33926MotorShield::setMotorEnableFlag(bool isEnabled)
+{
+  digitalWrite(_nD2, isEnabled);
+}

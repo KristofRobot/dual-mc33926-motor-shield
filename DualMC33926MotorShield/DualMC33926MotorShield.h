@@ -20,6 +20,7 @@ class DualMC33926MotorShield
     unsigned int getM1CurrentMilliamps(); // Get current reading for M1. 
     unsigned int getM2CurrentMilliamps(); // Get current reading for M2.
     unsigned char getFault(); // Get fault reading.
+    void setMotorEnableFlag(bool isEnabled); //false: disable motor outputs (free coasting); true: enable motors
     
   private:
     unsigned char _nD2;
